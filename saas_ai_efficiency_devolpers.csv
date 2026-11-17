@@ -1,0 +1,51 @@
+﻿developer_id,developer_name,team_id,role,seniority_level,experience_years,work_email
+1,Sam Coleman,1,Software Engineer,Mid,6,dev001@example-saas.com
+2,Dakota Murphy,1,Frontend Engineer,Mid,5,dev002@example-saas.com
+3,Amara Hayes,1,Full-Stack Engineer,Mid,3,dev003@example-saas.com
+4,Aaliyah Washington,1,QA Automation Engineer,Entry,0,dev004@example-saas.com
+5,Jamie Griffin,1,Backend Engineer,Entry,1,dev005@example-saas.com
+6,Robin Sullivan,1,Backend Engineer,Senior,9,dev006@example-saas.com
+7,Lucas Flores,1,Frontend Engineer,Mid,3,dev007@example-saas.com
+8,Quinn Ford,1,Software Engineer,Entry,2,dev008@example-saas.com
+9,Jesse Griffin,1,Data Engineer,Mid,5,dev009@example-saas.com
+10,Ethan Cox,1,Full-Stack Engineer,Mid,4,dev010@example-saas.com
+11,Aaliyah James,2,Software Engineer,Mid,3,dev011@example-saas.com
+12,Taylor Simmons,2,Software Engineer,Mid,6,dev012@example-saas.com
+13,Skyler Owens,2,Backend Engineer,Entry,2,dev013@example-saas.com
+14,Sophia Graham,2,QA Automation Engineer,Entry,1,dev014@example-saas.com
+15,Sophia Fisher,2,Software Engineer,Mid,4,dev015@example-saas.com
+16,Logan Wood,2,Full-Stack Engineer,Mid,5,dev016@example-saas.com
+17,Payton Stone,2,Backend Engineer,Entry,1,dev017@example-saas.com
+18,Cameron West,2,Software Engineer,Mid,6,dev018@example-saas.com
+19,Morgan Coleman,2,Frontend Engineer,Mid,4,dev019@example-saas.com
+20,Isabella Sanders,2,Software Engineer,Entry,2,dev020@example-saas.com
+21,Charlie Porter,3,Frontend Engineer,Senior,10,dev021@example-saas.com
+22,Noah Bennett,3,Full-Stack Engineer,Mid,3,dev022@example-saas.com
+23,Sam Gray,3,Full-Stack Engineer,Mid,5,dev023@example-saas.com
+24,Blake Coleman,3,Backend Engineer,Senior,9,dev024@example-saas.com
+25,Jesse Bennett,3,QA Automation Engineer,Senior,12,dev025@example-saas.com
+26,Emerson West,3,Frontend Engineer,Mid,4,dev026@example-saas.com
+27,Jamie Murphy,3,QA Automation Engineer,Mid,5,dev027@example-saas.com
+28,Bailey Porter,3,Software Engineer,Mid,4,dev028@example-saas.com
+29,Henry Sullivan,3,Frontend Engineer,Mid,3,dev029@example-saas.com
+30,Devin Carter,3,DevOps Engineer,Senior,7,dev030@example-saas.com
+31,Finley Patterson,4,Software Engineer,Senior,7,dev031@example-saas.com
+32,Maya Perry,4,Full-Stack Engineer,Mid,3,dev032@example-saas.com
+33,Casey Gray,4,Software Engineer,Mid,4,dev033@example-saas.com
+34,Kerry Murray,4,Software Engineer,Senior,8,dev034@example-saas.com
+35,Liam Sanders,4,DevOps Engineer,Entry,0,dev035@example-saas.com
+36,Henry Bell,4,Software Engineer,Senior,12,dev036@example-saas.com
+37,Finley Diaz,4,Full-Stack Engineer,Senior,12,dev037@example-saas.com
+38,Shawn Woods,4,Software Engineer,Entry,1,dev038@example-saas.com
+39,Rowan Hayes,4,Software Engineer,Mid,5,dev039@example-saas.com
+40,Noah Long,4,Software Engineer,Mid,4,dev040@example-saas.com
+41,Amara Murphy,5,Software Engineer,Entry,0,dev041@example-saas.com
+42,Taylor Bryant,5,Frontend Engineer,Mid,3,dev042@example-saas.com
+43,Hayden Cooper,5,Software Engineer,Entry,1,dev043@example-saas.com
+44,Cameron Bell,5,Frontend Engineer,Entry,2,dev044@example-saas.com
+45,Logan Hamilton,5,Software Engineer,Entry,1,dev045@example-saas.com
+46,Jamie Cooper,5,Backend Engineer,Mid,6,dev046@example-saas.com
+47,Micah Fisher,5,Full-Stack Engineer,Mid,3,dev047@example-saas.com
+48,Sophia Foster,5,Backend Engineer,Entry,0,dev048@example-saas.com
+49,Blake Foster,5,Software Engineer,Entry,0,dev049@example-saas.com
+50,Sam Barnes,5,Backend Engineer,Senior,8,dev050@example-saas.com

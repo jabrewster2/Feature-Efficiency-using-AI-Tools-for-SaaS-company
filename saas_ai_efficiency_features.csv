@@ -1,0 +1,181 @@
+﻿feature_id,team_id,feature_name,start_date,release_date,complexity,feature_type,estimated_story_points
+1,3,Refactor permissions 001,2025-02-08,2025-02-16,Small,Customer-facing,1
+2,1,Add workflow 002,2025-05-02,2025-06-15,Large,Performance,21
+3,1,Build API 003,2025-07-19,2025-07-21,Small,API,5
+4,5,Add notifications 004,2025-03-21,2025-04-05,Medium,Internal tooling,13
+5,5,Improve reporting 005,2025-01-30,2025-02-03,Small,Performance,2
+6,1,Improve onboarding 006,2025-11-01,2025-11-23,Large,Integration,13
+7,5,Enable billing 007,2025-01-21,2025-01-27,Small,Performance,3
+8,3,Launch onboarding 008,2025-03-09,2025-03-14,Small,API,5
+9,1,Improve permissions 009,2025-02-21,2025-02-27,Small,Internal tooling,3
+10,1,Add API 010,2025-05-26,2025-06-26,Large,Integration,34
+11,5,Build onboarding 011,2025-10-11,2025-10-19,Small,Customer-facing,2
+12,1,Build reporting 012,2025-05-20,2025-05-30,Medium,Internal tooling,5
+13,3,Improve onboarding 013,2025-01-27,2025-02-08,Medium,Performance,5
+14,3,Add sync 014,2025-05-15,2025-06-02,Medium,Performance,13
+15,1,Enable search 015,2025-03-18,2025-03-25,Small,Integration,3
+16,2,Build search 016,2025-06-07,2025-06-09,Small,API,2
+17,1,Enable sync 017,2025-07-28,2025-08-03,Small,Internal tooling,2
+18,4,Refactor onboarding 018,2025-06-20,2025-06-27,Small,Integration,2
+19,1,Add authentication 019,2025-08-29,2025-08-31,Small,Integration,5
+20,2,Refactor data export 020,2025-04-09,2025-04-16,Small,API,1
+21,5,Build search 021,2025-10-02,2025-10-10,Small,Customer-facing,3
+22,3,Build sync 022,2025-08-11,2025-08-17,Small,Integration,3
+23,5,Build search 023,2025-04-08,2025-04-14,Small,Reporting,5
+24,5,Add data export 024,2025-12-10,2025-12-29,Medium,Performance,13
+25,5,Launch notifications 025,2025-03-05,2025-03-13,Small,Security,3
+26,3,Add authentication 026,2025-10-11,2025-10-15,Small,Performance,5
+27,2,Enable search 027,2025-07-27,2025-08-08,Medium,API,5
+28,5,Refactor API 028,2025-08-27,2025-09-09,Medium,Reporting,13
+29,2,Launch onboarding 029,2025-09-21,2025-10-03,Medium,Security,5
+30,3,Improve search 030,2025-03-17,2025-03-20,Small,Internal tooling,5
+31,4,Add sync 031,2025-10-22,2025-10-29,Small,Reporting,5
+32,2,Improve workflow 032,2025-01-03,2025-01-10,Small,Internal tooling,2
+33,4,Refactor dashboard 033,2025-03-04,2025-03-07,Small,Integration,5
+34,5,Enable sync 034,2025-08-15,2025-09-04,Medium,Security,13
+35,2,Build authentication 035,2025-08-19,2025-09-03,Medium,Integration,13
+36,2,Add notifications 036,2025-05-27,2025-05-29,Small,API,3
+37,2,Launch authentication 037,2025-03-20,2025-03-25,Small,Customer-facing,5
+38,5,Refactor workflow 038,2025-04-16,2025-04-18,Small,Integration,1
+39,4,Refactor workflow 039,2025-06-02,2025-06-06,Small,Security,2
+40,3,Build onboarding 040,2025-07-19,2025-07-21,Small,Reporting,5
+41,4,Improve workflow 041,2025-10-01,2025-11-09,Large,Security,34
+42,4,Improve notifications 042,2025-04-04,2025-04-09,Small,Performance,3
+43,3,Refactor notifications 043,2025-05-23,2025-05-28,Small,Integration,1
+44,5,Launch billing 044,2025-04-25,2025-04-29,Small,Integration,1
+45,2,Add dashboard 045,2025-03-20,2025-04-06,Medium,Performance,13
+46,4,Add reporting 046,2025-07-08,2025-07-28,Medium,Security,5
+47,1,Launch workflow 047,2025-10-22,2025-11-03,Medium,Performance,5
+48,2,Launch reporting 048,2025-06-04,2025-06-12,Small,Integration,1
+49,3,Improve permissions 049,2025-07-09,2025-07-27,Medium,Reporting,5
+50,4,Refactor sync 050,2025-11-22,2025-11-26,Small,Internal tooling,5
+51,5,Enable API 051,2025-11-12,2025-12-10,Large,Performance,34
+52,3,Build API 052,2025-02-14,2025-02-17,Small,Internal tooling,5
+53,4,Add API 053,2025-06-16,2025-06-21,Small,Internal tooling,3
+54,3,Enable search 054,2025-05-22,2025-07-03,Large,Security,13
+55,4,Launch API 055,2025-05-04,2025-05-24,Medium,Reporting,8
+56,1,Build onboarding 056,2025-05-05,2025-05-10,Small,Security,3
+57,5,Build data export 057,2025-10-09,2025-10-16,Small,Reporting,5
+58,3,Build billing 058,2025-04-09,2025-04-16,Small,Reporting,2
+59,4,Enable notifications 059,2025-09-26,2025-10-02,Small,Customer-facing,2
+60,3,Add notifications 060,2025-10-01,2025-10-03,Small,Customer-facing,1
+61,2,Improve search 061,2025-09-09,2025-09-29,Medium,Security,8
+62,4,Refactor billing 062,2025-05-10,2025-05-12,Small,Integration,1
+63,1,Add dashboard 063,2025-01-28,2025-02-15,Medium,Integration,5
+64,1,Enable reporting 064,2025-11-07,2025-11-21,Medium,Internal tooling,8
+65,3,Enable reporting 065,2025-06-06,2025-07-09,Large,Customer-facing,34
+66,2,Add dashboard 066,2025-03-22,2025-03-24,Small,Security,1
+67,4,Build search 067,2025-08-29,2025-09-04,Small,Internal tooling,3
+68,4,Launch reporting 068,2025-05-16,2025-05-19,Small,Reporting,2
+69,5,Add billing 069,2025-05-17,2025-05-20,Small,Customer-facing,2
+70,5,Refactor sync 070,2025-03-05,2025-04-08,Large,API,34
+71,5,Improve workflow 071,2025-11-03,2025-11-12,Medium,Reporting,13
+72,1,Enable search 072,2025-10-22,2025-10-29,Small,Integration,3
+73,2,Build dashboard 073,2025-08-15,2025-08-22,Small,Security,5
+74,1,Build onboarding 074,2025-06-20,2025-06-25,Small,Customer-facing,2
+75,4,Improve API 075,2025-10-09,2025-10-14,Small,Customer-facing,3
+76,1,Improve onboarding 076,2025-09-21,2025-10-23,Large,Integration,13
+77,2,Launch API 077,2025-09-13,2025-09-30,Medium,Integration,5
+78,5,Launch API 078,2025-08-13,2025-08-17,Small,Customer-facing,1
+79,2,Improve permissions 079,2025-10-10,2025-10-22,Medium,Performance,5
+80,4,Refactor sync 080,2025-03-20,2025-04-29,Large,API,21
+81,4,Refactor authentication 081,2025-03-16,2025-03-22,Small,Security,2
+82,4,Build search 082,2025-09-17,2025-09-25,Small,API,3
+83,4,Refactor data export 083,2025-10-03,2025-11-06,Large,API,21
+84,2,Refactor authentication 084,2025-10-20,2025-11-16,Large,Integration,21
+85,4,Refactor onboarding 085,2025-07-15,2025-08-04,Medium,Integration,8
+86,2,Improve API 086,2025-06-19,2025-07-06,Medium,Customer-facing,5
+87,2,Improve API 087,2025-03-21,2025-03-28,Small,Integration,3
+88,4,Refactor data export 088,2025-10-01,2025-10-14,Medium,Reporting,13
+89,5,Add sync 089,2025-05-28,2025-06-04,Small,Customer-facing,5
+90,1,Improve search 090,2025-06-03,2025-06-10,Small,API,1
+91,3,Refactor reporting 091,2025-09-29,2025-10-02,Small,Reporting,2
+92,1,Launch authentication 092,2025-11-14,2025-11-28,Medium,Performance,5
+93,3,Refactor notifications 093,2025-01-05,2025-01-12,Small,Reporting,2
+94,3,Refactor sync 094,2025-11-24,2025-12-23,Large,API,13
+95,4,Refactor reporting 095,2025-05-02,2025-05-25,Large,API,21
+96,1,Build search 096,2025-07-22,2025-09-01,Large,Security,34
+97,4,Enable data export 097,2025-04-28,2025-05-10,Medium,Internal tooling,13
+98,2,Improve notifications 098,2025-11-27,2025-12-15,Medium,Integration,5
+99,3,Build sync 099,2025-06-01,2025-06-10,Medium,Performance,5
+100,5,Enable notifications 100,2025-09-29,2025-10-30,Large,Integration,21
+101,3,Refactor billing 101,2025-02-28,2025-03-13,Medium,Internal tooling,13
+102,4,Build billing 102,2025-10-13,2025-11-27,Large,Integration,21
+103,5,Enable workflow 103,2025-05-15,2025-05-19,Small,Integration,3
+104,2,Build reporting 104,2025-10-15,2025-10-21,Small,Internal tooling,1
+105,3,Improve search 105,2025-03-13,2025-03-22,Medium,API,5
+106,2,Refactor data export 106,2025-07-18,2025-08-11,Large,Reporting,34
+107,2,Refactor reporting 107,2025-02-20,2025-04-01,Large,Performance,34
+108,3,Build billing 108,2025-05-01,2025-05-06,Small,Reporting,3
+109,3,Improve API 109,2025-04-08,2025-04-12,Small,Customer-facing,2
+110,5,Add dashboard 110,2025-06-20,2025-07-11,Large,Integration,34
+111,2,Add reporting 111,2025-06-18,2025-06-29,Medium,Customer-facing,5
+112,5,Launch search 112,2025-02-26,2025-03-01,Small,Internal tooling,1
+113,5,Improve dashboard 113,2025-05-16,2025-05-19,Small,Reporting,5
+114,1,Enable reporting 114,2025-07-05,2025-07-13,Small,Customer-facing,5
+115,5,Enable notifications 115,2025-12-04,2025-12-12,Small,Performance,1
+116,4,Launch API 116,2025-09-09,2025-09-11,Small,Customer-facing,1
+117,2,Launch reporting 117,2025-11-16,2025-11-20,Small,Security,3
+118,5,Refactor billing 118,2025-11-06,2025-11-12,Small,Integration,1
+119,5,Refactor authentication 119,2025-08-09,2025-08-20,Medium,Performance,8
+120,4,Build onboarding 120,2025-08-07,2025-08-20,Medium,API,5
+121,4,Improve workflow 121,2025-02-13,2025-02-21,Small,Customer-facing,3
+122,1,Build onboarding 122,2025-10-15,2025-10-31,Medium,Customer-facing,8
+123,4,Build reporting 123,2025-01-27,2025-03-11,Large,API,34
+124,5,Add billing 124,2025-09-04,2025-09-11,Small,API,3
+125,5,Enable reporting 125,2025-10-15,2025-10-20,Small,Reporting,1
+126,3,Build data export 126,2025-06-08,2025-06-12,Small,Customer-facing,2
+127,4,Improve billing 127,2025-11-21,2025-11-28,Small,Reporting,2
+128,4,Launch data export 128,2025-06-09,2025-06-13,Small,Integration,1
+129,2,Build API 129,2025-02-11,2025-02-19,Medium,Reporting,8
+130,4,Improve data export 130,2025-09-20,2025-09-23,Small,Performance,1
+131,5,Improve authentication 131,2025-06-07,2025-06-25,Medium,Performance,5
+132,3,Build notifications 132,2025-03-12,2025-04-25,Large,API,21
+133,4,Launch authentication 133,2025-09-30,2025-10-05,Small,Security,3
+134,1,Build reporting 134,2025-02-09,2025-02-14,Small,Performance,5
+135,4,Build dashboard 135,2025-01-11,2025-01-16,Small,Integration,5
+136,1,Refactor reporting 136,2025-05-05,2025-05-07,Small,Performance,1
+137,3,Improve permissions 137,2025-03-28,2025-04-05,Small,Reporting,1
+138,2,Launch onboarding 138,2025-06-29,2025-07-30,Large,Integration,13
+139,2,Add onboarding 139,2025-11-05,2025-11-08,Small,Customer-facing,2
+140,4,Refactor onboarding 140,2025-10-24,2025-11-13,Medium,Security,13
+141,2,Launch notifications 141,2025-08-15,2025-08-20,Small,Integration,3
+142,3,Refactor search 142,2025-08-25,2025-09-06,Medium,Customer-facing,8
+143,1,Refactor reporting 143,2025-07-16,2025-08-01,Medium,Security,8
+144,2,Add search 144,2025-09-14,2025-09-19,Small,Performance,1
+145,1,Add sync 145,2025-01-21,2025-01-31,Medium,Performance,13
+146,5,Refactor workflow 146,2025-05-25,2025-05-29,Small,Integration,3
+147,1,Improve data export 147,2025-06-21,2025-07-09,Medium,Customer-facing,8
+148,5,Enable onboarding 148,2025-02-11,2025-03-13,Large,Internal tooling,34
+149,4,Build permissions 149,2025-02-13,2025-02-20,Small,Performance,3
+150,5,Enable data export 150,2025-08-05,2025-08-12,Small,Customer-facing,3
+151,2,Add authentication 151,2025-09-06,2025-09-14,Small,Internal tooling,2
+152,1,Improve onboarding 152,2025-09-27,2025-10-13,Medium,API,13
+153,2,Add sync 153,2025-11-16,2025-11-24,Small,Performance,1
+154,2,Launch API 154,2025-05-26,2025-07-04,Large,Internal tooling,21
+155,2,Refactor notifications 155,2025-08-14,2025-08-20,Small,Integration,5
+156,4,Add notifications 156,2025-11-06,2025-12-02,Large,Customer-facing,34
+157,1,Build billing 157,2025-03-05,2025-03-21,Medium,Integration,8
+158,5,Add API 158,2025-02-16,2025-02-21,Small,API,1
+159,4,Improve data export 159,2025-07-17,2025-07-28,Medium,Internal tooling,8
+160,3,Build API 160,2025-01-20,2025-01-30,Medium,Reporting,13
+161,4,Build authentication 161,2025-01-10,2025-01-19,Medium,Integration,13
+162,5,Add notifications 162,2025-05-28,2025-06-06,Medium,Customer-facing,5
+163,5,Enable permissions 163,2025-09-13,2025-09-15,Small,Customer-facing,2
+164,3,Add reporting 164,2025-06-30,2025-07-06,Small,Performance,2
+165,1,Enable permissions 165,2025-02-04,2025-02-17,Medium,Security,8
+166,1,Launch search 166,2025-05-10,2025-05-23,Medium,API,8
+167,1,Add search 167,2025-06-20,2025-07-09,Medium,API,13
+168,4,Add dashboard 168,2025-11-20,2025-12-25,Large,Customer-facing,21
+169,2,Build notifications 169,2025-01-22,2025-01-25,Small,Security,5
+170,3,Build data export 170,2025-04-08,2025-04-15,Small,Integration,1
+171,3,Refactor sync 171,2025-08-12,2025-08-16,Small,Performance,5
+172,4,Build billing 172,2025-09-23,2025-10-06,Medium,Reporting,5
+173,5,Build data export 173,2025-10-07,2025-11-01,Large,Customer-facing,34
+174,3,Add sync 174,2025-08-07,2025-08-13,Small,Performance,3
+175,3,Launch search 175,2025-05-21,2025-06-04,Medium,Customer-facing,8
+176,2,Launch API 176,2025-11-08,2025-12-02,Large,Customer-facing,13
+177,3,Enable dashboard 177,2025-01-17,2025-01-23,Small,Reporting,5
+178,4,Enable data export 178,2025-03-12,2025-03-29,Medium,Performance,13
+179,2,Refactor permissions 179,2025-04-06,2025-04-26,Large,Performance,21
+180,4,Launch API 180,2025-05-27,2025-06-02,Small,Internal tooling,1
