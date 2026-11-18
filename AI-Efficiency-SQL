@@ -1,0 +1,230 @@
+-- Returns all incident instances and orders them by date
+SELECT i.deployment_id,  DATE(d.deployment_date) AS deployment_date, i.severity
+FROM incidents i
+LEFT JOIN deployments d
+ON i.deployment_id = d.deployment_id
+ORDER BY d.deployment_date;
+
+-- Returns the number of incidents per serverity level and their avgerate resolultion time -- 
+SELECT severity, COUNT(severity) AS `incident count`, ROUND(AVG(resolution_time_hours), 2) AS `avg resolution time`
+FROM incidents
+GROUP BY severity;
+
+-- Returns the number of incidents per serverity level and their avgerate resolultion time per quarter -- 
+-- Q2 is when AI tools were introduced
+SELECT
+	i.severity,
+
+	COUNT(CASE WHEN d.deployment_date BETWEEN '2025-01-01' AND '2025-03-31' THEN 1 END) AS `incident count (Q1)`,
+	ROUND(AVG(CASE WHEN d.deployment_date BETWEEN '2025-01-01' AND '2025-03-31' THEN i.resolution_time_hours END), 2) AS `avg resolution time (Q1)`,
+
+	COUNT(CASE WHEN d.deployment_date BETWEEN '2025-04-01' AND '2025-06-30' THEN 1 END) AS `incident count (Q2)`,
+	ROUND(AVG(CASE WHEN d.deployment_date BETWEEN '2025-04-01' AND '2025-06-30' THEN i.resolution_time_hours END), 2) AS `avg resolution time (Q2)`,
+
+	COUNT(CASE WHEN d.deployment_date BETWEEN '2025-07-01' AND '2025-09-30' THEN 1 END) AS `incident count (Q3)`,
+	ROUND(AVG(CASE WHEN d.deployment_date BETWEEN '2025-07-01' AND '2025-09-30' THEN i.resolution_time_hours END), 2) AS `avg resolution time (Q3)`,
+
+	COUNT(CASE WHEN d.deployment_date BETWEEN '2025-10-01' AND '2025-12-31' THEN 1 END) AS `incident count (Q4)`,
+	ROUND(AVG(CASE WHEN d.deployment_date BETWEEN '2025-10-01' AND '2025-12-31' THEN i.resolution_time_hours END), 2) AS `avg resolution time (Q4)`,
+    
+    count(i.severity) AS ` year's incident count`, 
+    ROUND(AVG(i.resolution_time_hours), 2) AS `year's avg resolution time`
+    
+FROM incidents i
+LEFT JOIN deployments d
+ON i.deployment_id = d.deployment_id
+WHERE d.deployment_date BETWEEN '2025-01-01' AND '2025-12-31'
+GROUP BY i.severity
+ORDER BY
+  CASE i.severity
+    WHEN 'High' THEN 1
+    WHEN 'Medium' THEN 2
+    WHEN 'Low' THEN 3
+    ELSE 4
+  END;
+
+-- Returns the number of pull requests made by seniority and quarter -- 
+SELECT 
+	d.seniority_level, 
+	COUNT(CASE WHEN pr.merged_at BETWEEN '2025-01-01' AND '2025-03-31' THEN pr.developer_id END) AS `merge count (Q1)`,
+	COUNT(CASE WHEN pr.merged_at BETWEEN '2025-04-01' AND '2025-06-30' THEN pr.developer_id END) AS `merge count (Q2)`,
+	COUNT(CASE WHEN pr.merged_at BETWEEN '2025-07-01' AND '2025-09-30' THEN pr.developer_id END) AS `merge count (Q3)`,
+	COUNT(CASE WHEN pr.merged_at BETWEEN '2025-10-01' AND '2025-12-31' THEN pr.developer_id END) AS `merge count (Q4)`,
+    COUNT(pr.merged_at) as `total merge count`
+    
+FROM developers d
+LEFT JOIN pull_requests pr
+ON d.developer_id = pr.developer_id
+GROUP BY d.seniority_level
+ORDER BY
+	CASE d.seniority_level
+		WHEN 'Senior' THEN 1
+        WHEN 'Mid' THEN 2
+        WHEN 'Entry' THEN 3
+        ELSE 4
+END;
+
+-- Returns the number of features released per quarter -- 
+SELECT
+	complexity,
+	COUNT(CASE WHEN release_date BETWEEN '2025-01-01' AND '2025-03-31' THEN 1 END) AS `features added (Q1)`,
+	COUNT(CASE WHEN release_date BETWEEN '2025-04-01' AND '2025-06-30' THEN 1 END) AS `features added (Q2)`,
+	COUNT(CASE WHEN release_date BETWEEN '2025-07-01' AND '2025-09-30' THEN 1 END) AS `features added (Q3)`,
+	COUNT(CASE WHEN release_date BETWEEN '2025-10-01' AND '2025-12-31' THEN 1 END) AS `features added (Q4)`,
+    COUNT(complexity) as `yearly features added`
+FROM features
+group by complexity
+ORDER BY
+	CASE complexity
+		WHEN 'Large' THEN 1
+        WHEN 'Medium' THEN 2
+        WHEN 'Small' THEN 3
+        ELSE 4
+END;
+
+-- Returns what the engineers are using AI for -- 
+SELECT task_type, COUNT(task_type) AS `task_count`
+FROM ai_usage
+GROUP BY task_type
+ORDER BY COUNT(task_type) DESC;
+
+-- Makes a table for all of the low severity incidents sortby increasing date -- 
+SELECT i.deployment_id,  DATE(d.deployment_date) AS deployment_date, i.severity, i.resolution_time_hours
+FROM incidents i
+LEFT JOIN deployments d
+ON i.deployment_id = d.deployment_id
+WHERE i.severity = 'Low'
+ORDER BY d.deployment_date;
+
+-- Makes a table for all of the medium severity incidents sortby increasing date -- 
+SELECT i.deployment_id,  DATE(d.deployment_date) AS deployment_date, i.severity, i.resolution_time_hours
+FROM incidents i
+LEFT JOIN deployments d
+ON i.deployment_id = d.deployment_id
+WHERE i.severity = 'Medium'
+ORDER BY d.deployment_date;
+
+-- Makes a table for all of the high severity incidents sortby increasing date -- 
+SELECT i.deployment_id,  DATE(d.deployment_date) AS deployment_date, i.severity, i.resolution_time_hours
+FROM incidents i
+LEFT JOIN deployments d
+ON i.deployment_id = d.deployment_id
+WHERE i.severity = 'High'
+ORDER BY d.deployment_date;
+
+
+-- Makes a table for all of the low severity incidents sortby increasing date
+CREATE TABLE quarterly_incidents_low AS
+SELECT i.deployment_id,  DATE(d.deployment_date) AS deployment_date, i.severity, i.resolution_time_hours
+FROM incidents i
+LEFT JOIN deployments d
+ON i.deployment_id = d.deployment_id
+WHERE i.severity = 'Low'
+ORDER BY d.deployment_date;
+
+-- Makes a table for all of the medium severity incidents sortby increasing date
+CREATE TABLE quarterly_incidents_meduim AS
+SELECT i.deployment_id,  DATE(d.deployment_date) AS deployment_date, i.severity, i.resolution_time_hours
+FROM incidents i
+LEFT JOIN deployments d
+ON i.deployment_id = d.deployment_id
+WHERE i.severity = 'Medium'
+ORDER BY d.deployment_date;
+
+-- Makes a table for all of the high severity incidents sortby increasing date
+CREATE TABLE quarterly_incidents_high AS
+SELECT i.deployment_id,  DATE(d.deployment_date) AS deployment_date, i.severity, i.resolution_time_hours
+FROM incidents i
+LEFT JOIN deployments d
+ON i.deployment_id = d.deployment_id
+WHERE i.severity = 'High'
+ORDER BY d.deployment_date;
+
+-- Makes a table for what the engineers are using AI for
+CREATE TABLE ai_engineering_tasks AS
+SELECT task_type, COUNT(task_type) AS `task_count`
+FROM ai_usage
+GROUP BY task_type
+ORDER BY COUNT(task_type) DESC;
+
+-- Makes a table for the number of features released per quarter
+CREATE TABLE features_per_quarter AS
+SELECT
+	complexity,
+	COUNT(CASE WHEN release_date BETWEEN '2025-01-01' AND '2025-03-31' THEN 1 END) AS `features added (Q1)`,
+	COUNT(CASE WHEN release_date BETWEEN '2025-04-01' AND '2025-06-30' THEN 1 END) AS `features added (Q2)`,
+	COUNT(CASE WHEN release_date BETWEEN '2025-07-01' AND '2025-09-30' THEN 1 END) AS `features added (Q3)`,
+	COUNT(CASE WHEN release_date BETWEEN '2025-10-01' AND '2025-12-31' THEN 1 END) AS `features added (Q4)`,
+    COUNT(complexity) as `yearly features added`
+FROM features
+group by complexity
+ORDER BY
+	CASE complexity
+		WHEN 'Large' THEN 1
+        WHEN 'Medium' THEN 2
+        WHEN 'Small' THEN 3
+        ELSE 4
+END;
+
+-- Makes a table for the number of pull requests made by seniority per quarter
+CREATE TABLE seniority_merged_per_quarter AS
+SELECT 
+	d.seniority_level, 
+	COUNT(CASE WHEN pr.merged_at BETWEEN '2025-01-01' AND '2025-03-31' THEN pr.developer_id END) AS `merge count (Q1)`,
+	COUNT(CASE WHEN pr.merged_at BETWEEN '2025-04-01' AND '2025-06-30' THEN pr.developer_id END) AS `merge count (Q2)`,
+	COUNT(CASE WHEN pr.merged_at BETWEEN '2025-07-01' AND '2025-09-30' THEN pr.developer_id END) AS `merge count (Q3)`,
+	COUNT(CASE WHEN pr.merged_at BETWEEN '2025-10-01' AND '2025-12-31' THEN pr.developer_id END) AS `merge count (Q4)`,
+    COUNT(pr.merged_at) as `total merge count`
+    
+FROM developers d
+LEFT JOIN pull_requests pr
+ON d.developer_id = pr.developer_id
+GROUP BY d.seniority_level
+ORDER BY
+	CASE d.seniority_level
+		WHEN 'Senior' THEN 1
+        WHEN 'Mid' THEN 2
+        WHEN 'Entry' THEN 3
+        ELSE 4
+END;
+
+-- Creates a table for the number of incidents per serverity level and their avgerate resolultion time per quarter
+CREATE TABLE incidents_per_quarter AS
+SELECT
+	i.severity,
+
+	COUNT(CASE WHEN d.deployment_date BETWEEN '2025-01-01' AND '2025-03-31' THEN 1 END) AS `incident_count_(Q1)`,
+	ROUND(AVG(CASE WHEN d.deployment_date BETWEEN '2025-01-01' AND '2025-03-31' THEN i.resolution_time_hours END), 2) AS `avg_resolution_time_(Q1)`,
+
+	COUNT(CASE WHEN d.deployment_date BETWEEN '2025-04-01' AND '2025-06-30' THEN 1 END) AS `incident_count_(Q2)`,
+	ROUND(AVG(CASE WHEN d.deployment_date BETWEEN '2025-04-01' AND '2025-06-30' THEN i.resolution_time_hours END), 2) AS `avg_resolution_time_(Q2)`,
+
+	COUNT(CASE WHEN d.deployment_date BETWEEN '2025-07-01' AND '2025-09-30' THEN 1 END) AS `incident_count_(Q3)`,
+	ROUND(AVG(CASE WHEN d.deployment_date BETWEEN '2025-07-01' AND '2025-09-30' THEN i.resolution_time_hours END), 2) AS `avg_resolution_time_(Q3)`,
+
+	COUNT(CASE WHEN d.deployment_date BETWEEN '2025-10-01' AND '2025-12-31' THEN 1 END) AS `incident_count_(Q4)`,
+	ROUND(AVG(CASE WHEN d.deployment_date BETWEEN '2025-10-01' AND '2025-12-31' THEN i.resolution_time_hours END), 2) AS `avg_resolution_time_(Q4)`,
+    
+    count(i.severity) AS `year_incident_count`, 
+    ROUND(AVG(i.resolution_time_hours), 2) AS `year_avg_resolution_time`
+    
+FROM incidents i
+LEFT JOIN deployments d
+ON i.deployment_id = d.deployment_id
+WHERE d.deployment_date BETWEEN '2025-01-01' AND '2025-12-31'
+GROUP BY i.severity
+ORDER BY
+  CASE i.severity
+    WHEN 'High' THEN 1
+    WHEN 'Medium' THEN 2
+    WHEN 'Low' THEN 3
+    ELSE 4
+  END;
+  
+  -- Returns all incident instances and orders them by date
+CREATE TABLE total_incidents AS
+SELECT i.deployment_id,  DATE(d.deployment_date) AS deployment_date, i.severity, i.resolution_time_hours
+FROM incidents i
+LEFT JOIN deployments d
+ON i.deployment_id = d.deployment_id
+ORDER BY d.deployment_date;
